@@ -1,7 +1,10 @@
 package de.designexe.view;
 
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
+import java.util.HashMap;
+import java.util.Map;
 
 @ManagedBean
 @ApplicationScoped
@@ -12,15 +15,38 @@ public class EditSightView {
     private boolean handicappe;
     private double preis;
     private City city;
+    private String[] myArray;
+    private Map<String, String> myMap;
 
 
 
-    public EditSightView() {
+    @PostConstruct
+    public void init(){
         this.sightID = 1;
         this.sightName = "Hafen";
         this.preis = 12.5;
         this.city = new City("Elmshorn");
+        myMap = new HashMap<>();
+        myMap.put("Eins", "Erster Wert");
+        myMap.put("Zwei", "Zweiter Wert");
+        myMap.put("Drei", "Dritter Wert");
+        myArray = new String[] {"Eins", "Zwi", "Drei"};
+    }
 
+    public String[] getMyArray() {
+        return myArray;
+    }
+
+    public void setMyArray(String[] myArray) {
+        this.myArray = myArray;
+    }
+
+    public Map<String, String> getMyMap() {
+        return myMap;
+    }
+
+    public void setMyMap(Map<String, String> myMap) {
+        this.myMap = myMap;
     }
 
     public City getCity() {

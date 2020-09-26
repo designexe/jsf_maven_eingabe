@@ -11,18 +11,21 @@
 <h:body>
     <h:form>
         <h:panelGrid columns="2">
-            <h:outputLabel value="Name: "/>
-            <h:inputText value="#{login.name}"/>
-            <h:outputLabel value="Password: "/>
-            <h:inputText value="#{login.password}"/>
+            <h:outputLabel value="Username: "/>
+            <h:inputText value=""/>
+
+            <h:outputLabel value="Password"/>
+            <h:inputText value=""/>
+
+            <h:outputLabel value="Password confirm"/>
+            <h:inputText value=""/>
+
+            <h:outputLabel value="E-Mail"/>
+            <h:inputText value=""/>
+
         </h:panelGrid>
-        <h:commandButton value="request"/>
+        <h:commandButton value="Register"/>
     </h:form>
-
-    <h:outputLabel value="#{login.name}"/>
-    <br/>
-    <h:outputLabel value="#{login.password}"/>
-
-
 </h:body>
+
 </html>

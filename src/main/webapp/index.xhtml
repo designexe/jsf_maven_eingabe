@@ -14,20 +14,20 @@
     <br/>
     <h:outputLabel value="Name: #{editSightView.sightName}"/>
     <br/>
-    <h:outputLabel value="Preis: #{editSightView.preis}"/>
+    <h:outputLabel value="Preis: #{editSightView.price}"/>
     <br/>
     <h:outputLabel value="Stadt: #{editSightView.city.name}"/>
     <br/>
-    <h:outputLabel value="Netto-Eintrittspreis: #{editSightView.preis - editSightView.preis / 19}"/>
+    <h:outputLabel value="Netto-Eintrittspreis: #{editSightView.price - editSightView.price / 19}"/>
     <br/>
-    <h:outputLabel value="Eintritt ist: #{editSightView.preis > 0 ? 'Nicht Kostenlos' : 'Kostenlos'}"/>
+    <h:outputLabel value="Eintritt ist: #{editSightView.price > 0 ? 'Nicht Kostenlos' : 'Kostenlos'}"/>
 
     <h1>Eingabe</h1>
     <h:inputText value="#{editSightView.sightID}"/>
     <br/>
     <h:inputText value="#{editSightView.sightName}"/>
     <br/>
-    <h:inputText value="#{editSightView.preis}"/>
+    <h:inputText value="#{editSightView.price}"/>
     <br/>
     <h:inputText value="#{editSightView.city.name}"/>
     <br/>

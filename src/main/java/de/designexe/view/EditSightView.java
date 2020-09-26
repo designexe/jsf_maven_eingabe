@@ -11,26 +11,25 @@ import java.util.Map;
 public class EditSightView {
     private int sightID ;
     private String sightName;
-    private double entraceFee;
-    private boolean handicappe;
-    private double preis;
+    private double entranceFee;
+    private boolean handicapped;
+    private double price;
     private City city;
     private String[] myArray;
     private Map<String, String> myMap;
-
 
 
     @PostConstruct
     public void init(){
         this.sightID = 1;
         this.sightName = "Hafen";
-        this.preis = 12.5;
+        this.price = 12.5;
         this.city = new City("Elmshorn");
         myMap = new HashMap<>();
         myMap.put("Eins", "Erster Wert");
         myMap.put("Zwei", "Zweiter Wert");
         myMap.put("Drei", "Dritter Wert");
-        myArray = new String[] {"Eins", "Zwi", "Drei"};
+        myArray = new String[] {"Eins", "Zwei", "Drei"};
     }
 
     public String[] getMyArray() {
@@ -57,12 +56,12 @@ public class EditSightView {
         this.city = city;
     }
 
-    public double getPreis() {
-        return preis;
+    public double getPrice() {
+        return price;
     }
 
-    public void setPreis(double preis) {
-        this.preis = preis;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public int getSightID() {
@@ -81,19 +80,19 @@ public class EditSightView {
         this.sightName = sightName;
     }
 
-    public double getEntraceFee() {
-        return entraceFee;
+    public double getEntranceFee() {
+        return entranceFee;
     }
 
-    public void setEntraceFee(double entraceFee) {
-        this.entraceFee = entraceFee;
+    public void setEntranceFee(double entranceFee) {
+        this.entranceFee = entranceFee;
     }
 
-    public boolean isHandicappe() {
-        return handicappe;
+    public boolean isHandicapped() {
+        return handicapped;
     }
 
-    public void setHandicappe(boolean handicappe) {
-        this.handicappe = handicappe;
+    public void setHandicapped(boolean handicapped) {
+        this.handicapped = handicapped;
     }
 }

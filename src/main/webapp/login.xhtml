@@ -12,16 +12,21 @@
     <h:form>
         <h:panelGrid columns="2">
             <h:outputLabel value="Name: "/>
-            <h:inputText value="#{login.name}"/>
+            <h:inputText value="#{loginView.name}"/>
             <h:outputLabel value="Password: "/>
-            <h:inputText value="#{login.password}"/>
+            <h:inputText value="#{loginView.password}"/>
         </h:panelGrid>
         <h:commandButton value="request"/>
     </h:form>
 
-    <h:outputLabel value="#{login.name}"/>
+        <h:link value="Impressum" outcome="impressum"/>
+        <h:form>
+            <h:commandLink value="Registrieren" action="#{loginView.toRegistration}"/>
+        </h:form>
+
+    <h:outputLabel value="#{loginView.name}"/>
     <br/>
-    <h:outputLabel value="#{login.password}"/>
+    <h:outputLabel value="#{loginView.password}"/>
 
 
 </h:body>

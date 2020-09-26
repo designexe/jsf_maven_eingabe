@@ -5,9 +5,13 @@ import javax.faces.bean.RequestScoped;
 
 @ManagedBean
 @RequestScoped
-public class Login {
+public class LoginView {
     private String name;
     private String password;
+
+    public String toRegistration(){
+        return "register";
+    }
 
     public String getName() {
         return name;
